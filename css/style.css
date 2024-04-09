@@ -1,0 +1,975 @@
+@charset "utf-8";
+body {
+    display: none;
+}
+.home .loader{
+    display: none;
+
+
+}
+.home .loader {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 555;
+    top: 0;
+    left: 0;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+}
+
+.home .loader .txt {
+    width: 300px;
+    border-right: 5px solid #000;
+    color: #353535;
+    text-transform: uppercase;
+    overflow: hidden;
+    white-space: nowrap;
+    line-height: 1.3;
+    animation: typing 3s steps(35) infinite, caret .3s step-end infinite alternate;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+@keyframes typing {
+    15%,
+    50% {
+        width: 0;
+    }
+    100%{
+        width: 280px;
+    }
+}
+
+@keyframes caret {
+    50% {
+        border-color: transparent;
+    }
+}
+
+body {
+    font-family: Helvetica,Arial, sans-serif;
+    margin: 0;
+    color: #c490bf;
+    background-color: #f2f6ff;
+    line-height: 1.6;
+    letter-spacing: 1.8;
+    font-size: 16px;
+    word-break: break-all;
+}
+main {
+background-color: #f2f6ff;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+ul {
+ list-style: none;
+ text-decoration: none;
+}
+li {
+    list-style: none;
+    text-decoration: none;
+}
+
+.text {
+font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;;
+color: #000;
+}
+img {
+    margin: 0 auto;
+    padding: 0;
+        max-width: 100%;
+        height: auto;
+}
+.inner {
+    max-width: 1100px;
+        width: 80.527%;
+    margin:  0 auto;
+}
+
+header {
+    padding: 40px 0px;
+    background-color:rgb(207, 198, 239);
+    font-size: 24px;
+}
+
+
+header .inner {
+    display: flex;
+        justify-content: space-between;
+        align-items: center;
+}
+
+.orange {
+    color: #ffc790;
+}
+.single .orange a{
+    color: #000;
+}
+.single .orange a:hover{
+    color: #f6b37f;
+}
+.single .mark{
+    color:#ffc790 ;
+    transition: color  1s;
+}
+.single .mark:hover{
+    color:#f00;
+}
+
+
+header .menu {
+    width:40px ;
+    height: 40px;
+}
+.submenu {
+    display: none;
+}
+
+
+.headinner {
+    background-color: #000;
+    opacity: 0.9;
+}
+.headline {
+max-height: 630px;
+    display: flex;
+        overflow: hidden;
+}
+
+.headline-mask {
+    display: flex;
+        animation: loop-list 50s linear infinite;
+}
+
+.headline-item img {
+        width: 100%;
+            object-fit: cover;
+}
+.headline-item {
+left: 0;
+bottom: 0;
+width: 1700px;
+}
+
+@keyframes loop-list {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
+
+h2 {
+    margin-top:20px ;
+    font-size: 48px;
+    text-align: center;
+    font-weight: bold;
+    color: #c490bf;
+    margin-bottom: 50px;
+}
+.blog-al {
+    margin: 5px 0 50px;
+}
+
+.blog-al img{
+    width: 100px;
+    height: 100px;
+    border-radius: 25px;
+    border: #8f82bc 3px solid;
+    display: block;
+}
+.one {
+    margin-top:20px ;
+    padding: 20px ;
+    border: #8f82bc 3px solid;
+    border-radius:45px ;
+    transition: border 0.7s;
+    transition: background-color 0.5s;
+
+}
+
+.circle {
+    /*波紋の基点とするためrelativeを指定*/
+    position: relative;
+    /*リンクの形状*/
+    display: inline-block;
+    text-decoration: none;
+    color: #333;
+    outline: none;
+}
+
+/*波形の設定*/
+
+.circle:hover::before {
+    content: '';
+    /*絶対配置で波形の位置を決める*/
+    position: absolute;
+    left:40%;
+    top: 40%;
+    /*波形の形状*/
+    border: 2px solid #000;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    /*はじめは不透明*/
+    opacity: 1;
+    /*アニメーションの設定*/
+    animation: 1s circleanime2 forwards;
+}
+
+/*波形が広がるアニメーション*/
+@keyframes circleanime2 {
+    0% {
+        transform: scale(0);
+    }
+
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+
+
+.one:hover{
+    border: #f6b37f 3px solid;
+        background-color: #FFFAFB;
+}
+
+.one  img:hover{
+    border: #f6b37f 3px solid;
+        background-color: #FFFAFB;
+
+}
+.text h4 {
+    font-size: 30px;
+    text-align: center;
+    margin: 10px 0;
+}
+h5{
+    font-size: 16px;
+}
+h6{
+    font-size: 16px;
+}
+.text p {
+    margin-left: 10px;
+    margin-right: 20px;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom:10px ;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+.text .time {
+    text-align: right;
+    padding-right: 10px;
+}
+
+.btn {
+    display: block;
+    color: #fff;
+    background-color:#6C6488;
+    margin: 30px auto 0;
+    padding: 10px;
+    border: #fff 1px solid;
+    border-radius:45px;
+    font-size: 20px;
+    text-align: center;
+    width: 30%;
+    max-height: 100px;
+    transition:color 0.5s;
+    transition:background-color 0.5s;
+}
+.btn:hover{
+    background-color: #f6b37f;
+    color: #000;
+}
+
+
+.category-all {
+    position: sticky;
+    top: 150px;;
+    border: #8f82bc 3px solid;
+    margin-top: 25px;
+    margin-left: 20px;
+    margin-bottom: 50px;
+    border-radius: 45px;
+    padding: 10px;
+}
+.category-all li{
+    text-align: center;
+
+}
+.category-all a{
+    transition:color 0.5s;
+}
+
+.category-all a:hover{
+    color: #F00;
+}
+
+
+.tag a {
+    color: #f6b37f;
+}
+.tag {
+    text-align: center;
+}
+
+.tag li {
+    padding-bottom: 20px;
+}
+
+h3 {
+    margin-top: 10px;
+    text-align: center;
+    font-size:30px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.logo img {
+    margin: 0 10px 0 0;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+.logo {
+    margin-left: 15px;
+}
+.logo  dl{
+    display: flex;
+    margin-bottom: 20px;
+    margin-left: 25%;
+    align-items: center;
+    justify-content: flex-start;
+}
+.logo dd {
+    margin-left: 10px;
+}
+.logo a {
+    color: #c490bf;
+}
+.copy {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    color: #c490bf;
+    background-color: #f2f6ff;
+    border: none;
+    display: flex;
+    align-items: center;
+
+}
+.copy p {
+    margin-left: 10px;
+}
+.copy p:hover{
+    color: #f00;
+}
+.buttonlogo {
+display: block;
+margin-left: 29%;
+margin-bottom: 20px;
+background-color: none;
+}
+
+
+.ago a:hover{
+color: #f00;
+}
+.share {
+    margin-bottom: 40px;
+}
+
+.profile {
+    max-width: 600px;
+    margin: 50px auto 0;
+
+    border: #8f82bc 3px solid;
+    border-radius: 45px;
+}
+.profile h3 {
+    font-size: 48px;
+}
+
+.profile .icon {
+    border: #8f82bc 3px solid;
+    border-radius: 50px;
+    display: block;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+}
+.profile p {
+    margin: 20px;
+    text-align: center;
+}
+
+
+.profile:hover{
+        border: #f6b37f 3px solid;
+            background-color: #FFFAFB;
+}
+.sns{
+    display: flex;
+    margin-left:50%;
+    margin-bottom: 20px;
+
+}
+.sns img{
+    margin-left: 20px;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+
+footer {
+    margin-top: 50px;
+    padding: 75px;
+    color: #333;
+    background-color: rgb(239, 236, 250);
+}
+footer p {
+    text-align: center;
+    font-size: 20px;
+}
+
+#page-top p{
+    background: #c490bf;
+    color: #fff;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.8rem;
+    transition: all 0.3s;}
+#page-top p:hover {
+    background-color: #C400B1;
+}
+
+/*ここからsingle.htmlのCSSを書く*/
+
+.infodays{
+    padding: 0;
+    text-align: right;
+    color: #000;
+    margin-bottom: 5px;
+}
+.infodays a{
+color: #000;
+}
+.span {
+    list-style: none;
+text-decoration: none;
+}
+
+.mainblog {
+    width: 90%;
+    max-width: 860px;
+    overflow-wrap: normal;
+    word-break: break-all;
+    margin: 50px auto;
+    padding: 35px 20px;
+    background-color: #eee;
+    border-radius:45px ;
+}
+.mainblog h2 {
+    color: #000;
+    font-weight: normal;
+}
+.mainblog h3 {
+    margin: 20px 0;
+}
+.mainblog h4 {
+    margin: 20px 0;
+}
+.mainblog p {
+    color: #000;
+    letter-spacing: 1.9;
+    line-height: 2;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.mainblog img{
+    margin: 0;
+    padding: 20px 0;
+    max-height: 850px;
+    max-width: 800px;
+}
+
+.mainblog h3 {
+    text-align: left;
+    font-size: 28px;
+    color:#c490bf ;
+}
+
+
+
+input[type="text"]{
+    width: 80%;
+    max-width: 500px;
+margin:8px 0 20px 20px ;
+}
+input[type="email"]{
+    width: 80%;
+    max-width: 500px;
+    margin: 8px 20px 40px;
+}
+input[id="com"]{
+margin-left: 8px;
+width: 80%;
+max-width: 400px;
+padding-bottom: 200px;
+margin-top: 10px;
+margin-bottom: 30px;
+}
+
+#com {
+    margin-left: 8px;
+    margin-bottom: 10px;
+}
+.text-com {
+    margin-top: 40px;
+}
+
+input[type="submit"]{
+    margin: 10px auto 20ox;
+    width: 100px;
+}
+#submit {
+    margin-left: 10px;
+}
+.comment-body {
+    display: none;
+}
+
+.comments a{
+    display: none;
+}
+.comments span{
+    display: none;
+}
+.entry-meta p{
+    display: none;
+}
+
+.nextblog img {
+    border: #8f82bc 3px solid;
+    text-align: center;
+    display: block;
+    width: 87%;
+    height: 220PX;
+    object-fit: cover;
+    margin: 0 auto;
+    border-radius: 35px;
+}
+
+
+.nextblog {
+    border: #8f82bc 3px solid;
+    border-radius: 45px;
+padding: 30px;
+}
+
+.nextblog p{
+    margin: 20px;
+    font-size: 24px;
+    text-align:center;
+    color: #c490bf;
+    transition:color 0.5s;
+
+}
+.nextblog .btn a {
+    color: #fff;
+}
+
+.nextblog p:hover{
+    color: #F00;
+}
+
+.nextblog .btn {
+    margin:0 auto;
+    display:block;
+    background-color: #6C6488;
+    color: #fff;
+    width: 60%;
+    height: 15%;
+    transition:background-color 0.5s;
+}
+.nextblog .btn:hover{
+    background-color: #f6b37f;
+}
+.nextblog .btn a:hover{
+    color: #000;
+}
+
+.nextblog a {
+            color: #c490bf;
+    display: block;
+    font-size: 26px;
+    text-align: center;
+overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+
+}
+.nextblog .ago{
+    margin: 20px 0;
+}
+.nextblog .next {
+    margin: 20px 0;
+}
+.nextblog a:hover{
+    color: #F00;
+}
+
+.blogtime {
+    text-align: right;
+}
+
+
+.drawer_hidden {
+    display: none;
+  }
+
+  .drawer_open {
+    display: flex;
+    height: 60px;
+    width: 60px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+    cursor: pointer;
+  }
+
+
+
+
+  .drawer_open span,
+  .drawer_open span:before,
+  .drawer_open span:after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 25px;
+    border-radius: 3px;
+    background: #fff;
+    transition: 0.5s;
+    position: absolute;
+  }
+
+  .drawer_open span:before {
+    bottom: 8px;
+  }
+
+
+  .drawer_open span:after {
+    top: 8px;
+  }
+
+  #drawer_input:checked ~ .drawer_open span {
+    background: rgba(255, 255, 255, 0);
+  }
+
+   #drawer_input:checked ~ .drawer_open span::before {
+    bottom: 0;
+    transform: rotate(45deg);
+  }
+
+  #drawer_input:checked ~ .drawer_open span::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+
+
+  .nav_content {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 100%;
+    z-index: 99;
+    background: #fff;
+    transition: .5s;
+  }
+
+
+  .nav_list {
+    list-style: none;
+  }
+
+
+  #drawer_input:checked ~ .nav_content {
+    left: 0;
+}
+
+.nav_item a {
+    color: #fff;
+    display: block;
+    text-align: center;
+padding: 20px;
+margin-right: 100px;}
+.nav_item a:hover{
+    color: #f6b37f;
+}
+.nav_item .orange{
+    color: #f6b37f;
+}
+.nav_item .orange:hover{
+    color: #F00;
+}
+.single .nav_item .orange{
+    color: #fff;
+}
+
+.nav_list {
+    margin-top: 200px;
+}
+.nav_content {
+    margin-left: 80px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+.cat-item:nth-child(n+5) {
+    display: none;
+}
+
+ul .list{
+    width: 150px;
+    padding: 0;
+    color: #f6b37f;
+    float: left;
+    margin-left: 30px;
+}
+
+li {
+    list-style: none;
+}
+
+ul ul {
+
+    padding: 0;
+    overflow: hidden;
+    transition: .5s;
+    margin: 0;
+}
+
+
+.accordionBtn {
+    background-color: #c490bf;
+        width: 100px;
+            padding: 5px 0;
+            color: #fff;
+            border-radius: 35px;
+            border: none;
+            transition: background-color 0.6s;
+}
+
+.accordionBtn:hover{
+    background-color: #C400B1;
+}
+
+ul.active {
+    overflow-y: auto;
+}
+.accent a{
+    display: block;
+    color: #ffc790;
+}
+th a{
+    color: #000;
+}
+
+span  a{
+    color:#ffc790;;
+}
+
+pre {
+    display: inline-block;
+    width: 100%;
+overflow-wrap:break-word;
+    word-break: break-all;
+    white-space:pre-wrap;
+}
+
+
+.cate {
+    text-align: left;
+}
+@media(min-width:600px){
+    .circle:hover::before {
+        left: 52%;
+        top: 40%;
+    }
+    header .menu{
+        display: none;
+    }
+
+    .submenu {
+        position:relative;
+        display: flex;
+    }
+    .submenu li {
+        padding-left: 20px;
+        color: #333;
+padding:10px;/*余白指定*/
+list-style:none;/*リストスタイルを非表示に*/
+    }
+    .submenu a {
+        color: #333;
+        transition:color 0.5s;
+    }
+    .submenu a:hover{
+        color:#ffc790;
+    }
+.submenu .orange {
+    color: #ffc790;
+    transition:color 0.5s;
+}
+.submenu .orange:hover{
+    color: #f00;
+}
+
+    .headlineimg{
+max-height: 630px;
+    }
+
+    .tag {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+.category-all {
+    width: 25%;
+    height: 100%;
+    max-width: 200px;
+    display: inline-block;
+}
+
+
+.blog-al{
+    width: 75%;
+    height: 100%;
+}
+.wrapper {
+    display: flex;
+}
+
+.one a {
+    display: flex;
+justify-content: space-between;
+align-items: center;
+text-align: left;
+}
+
+.one .text {
+    width: 80%;
+}
+.one .blog-al img {
+    width: 20%;
+}
+.one dt{
+    text-align: left;
+    margin-left: 15px;
+}
+.one dd{
+    text-align: left;
+    margin-left: 15px;
+}
+.one {
+    transition: border 0.8s;
+}
+
+
+
+.logo dl {
+    display: flex;
+    justify-content: left;
+    margin-left: 10%;
+}
+
+.nav {
+    display:none;
+}
+.buttonlogo {
+    margin-left:17%;
+}
+
+input[type="text"] {
+    margin: 20px 0 20px 20px;
+}
+
+input[type="email"] {
+    width: 80%;
+    max-width: 500px;
+    margin: 20px 20px 40px;
+}
+
+input[id="com"] {
+    margin-left: 8px;
+    width: 80%;
+    max-width: 800px;
+    padding-bottom: 200px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+#com {
+    margin-left: 40px;
+}
+#submit {
+    margin: 40px auto 20ox;
+    width: 100px;
+}
+
+/*ここからsingle.htmlのCSSを書く*/
+
+
+.nextblog {
+    display: flex;
+    justify-content: space-between;
+}
+.nextblog .ago {
+    width: 30%;
+    margin: 0;
+}
+.nextblog .next {
+    width: 30%;
+margin: 0;
+}
+
+.nextblog .btn {
+    width: 40%;
+}
+.nextblog .btn {
+margin: 170px auto 0;
+max-width: 230px;
+margin-left: 20px;
+margin-right: 20px;
+}
+
+textarea    {
+    padding: right 30px;
+}
+}
